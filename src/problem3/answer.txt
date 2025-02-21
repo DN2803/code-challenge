@@ -1,0 +1,9 @@
+1. The variable 'lhsPriority' is used but is not declared anywhere.
+
+2. sortedBalances is used twice: once in formattedBalances.map(...) and again in rows.map(...) =>  This leads to two iterations over the same array, impacting performance
+
+3. prices is listed in useMemo for sortedBalances, but it is not used.
+
+4. Using index as the key in WalletRow can cause incorrect UI updates when array items change.
+
+5. Every function call iterates through multiple case statements.
